@@ -20,7 +20,7 @@ spec:
         app: cursul-rata-config
     spec:
       containers:
-        - image: registry.gitlab.com/petrelevich/dockerregistry/currency-rate-client:v3
+        - image: registry.github.com/File-V/Curs-valutar:v3
           name: cursul-rata-config
           ports:
             - containerPort: 8080
