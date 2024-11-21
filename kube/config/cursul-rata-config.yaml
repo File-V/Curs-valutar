@@ -1,0 +1,9 @@
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: currsul-rata-config
+data:
+  SPRING_PROFILES_ACTIVE: prod
+  JAVA_TOOL_OPTIONS: -XX:+UseContainerSupport -XX:MaxRAMPercentage=80

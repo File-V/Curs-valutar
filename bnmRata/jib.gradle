@@ -1,0 +1,21 @@
+
+jib {
+    container.creationTime = 'USE_CURRENT_TIMESTAMP'
+    from {
+        image = 'bellsoft/liberica-openjdk-alpine-musl:15.0.2-10-x86_64'
+    }
+    to {
+        tags = ['v1', 'latest']
+        image = 'registry.github.com/File-V'
+        auth {
+            username = githubUser
+            password = githubPassword
+        }
+    }
+}
+// ./gradlew jibDockerBuild
+
+//docker login registry.github.com
+//docker run -p 8080:8080 registry.github.com/File-V
+
+//docker push registry.github.com/File-V:latest
