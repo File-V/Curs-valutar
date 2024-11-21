@@ -2,12 +2,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cbr-rate
+  name: bnm-rata
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: cbr-rate
+      app: bnm-rata
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -16,11 +16,11 @@ spec:
   template:
     metadata:
       labels:
-        app: cbr-rate
+        app: bnm-rata
     spec:
       containers:
-        - image: registry.gitlab.com/petrelevich/dockerregistry/cbr-rate:v1
-          name: cbr-rate
+        - image: registry.github.com/File-V/dockerregistry/bnm-rata:v1
+          name: bnm-rata
           ports:
             - containerPort: 8081
           envFrom:
